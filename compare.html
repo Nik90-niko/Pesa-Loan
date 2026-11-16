@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Loans in Kenya - PesaLoan254</title>
+<style>
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:0;background:#f4f6f4;padding-bottom:80px}
+header{background:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;box-shadow:0 1px 5px rgba(0,0,0,.08)}
+.logo{font-size:22px;font-weight:900;color:#0a8a00;text-decoration:none}
+.btn{padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px}
+.btn-green{background:#0a8a00;color:#fff}
+.top{padding:20px 15px;text-align:center}
+.top h1{margin:0;font-size:24px}.top p{color:#666;font-size:14px}
+.filter{padding:0 15px;display:flex;gap:8px;overflow-x:auto}
+.filter button{padding:8px 14px;border:1px solid #ddd;background:#fff;border-radius:20px;white-space:nowrap}
+.filter button.active{background:#0a8a00;color:#fff;border-color:#0a8a00}
+.card{background:#fff;margin:15px;border-radius:12px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.card h3{margin:0;color:#0a8a00}
+.card table{width:100%;font-size:13px;border-collapse:collapse;margin:10px 0}
+.card td{padding:6px 0;border-bottom:1px solid #f0f0f0}.card td:last-child{text-align:right;font-weight:bold}
+.apply{display:block;text-align:center;background:#0a8a00;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:bold}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px 0 12px;border-top:1px solid #eee}
+.bottom-nav a{text-decoration:none;color:#888;text-align:center;font-size:11px;display:flex;flex-direction:column;gap:2px;align-items:center}
+.bottom-nav a.active{color:#0a8a00;font-weight:bold}.bottom-nav span{font-size:20px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="logo">← PesaLoan254</a><a href="index.html" class="btn btn-green">Find My Lender</a></header>
+<div class="top"><h1>Compare Loans in Kenya</h1><p>Compare interest, limit, speed. Pick best for you.</p></div>
+<div class="filter"><button class="active" onclick="show('all',this)">All</button><button onclick="show('fast',this)">Fastest</button><button onclick="show('big',this)">Big Loans</button><button onclick="show('low',this)">Low Interest</button></div>
+
+<div id="list">
+<div class="card" data-cat="fast low"><h3>Tala Kenya ⭐ 4.5</h3><table><tr><td>Loan Limit</td><td>KES 1,000 - 30,000</td></tr><tr><td>Interest</td><td>5% - 15%</td></tr><tr><td>Speed</td><td>5 Minutes</td></tr><tr><td>Repay</td><td>21 - 61 Days</td></tr><tr><td>Best For</td><td>Emergency</td></tr></table><a class="apply" href="https://tala.co.ke" target="_blank">Apply on Tala →</a></div>
+
+<div class="card" data-cat="fast low"><h3>M-Shwari ⭐ 4.6</h3><table><tr><td>Loan Limit</td><td>KES 100 - 50,000</td></tr><tr><td>Interest</td><td>7.5%</td></tr><tr><td>Speed</td><td>Instant *234#</td></tr><tr><td>Repay</td><td>30 Days</td></tr><tr><td>Best For</td><td>Beginners</td></tr></table><a class="apply" href="m-shwari-loan.html">How to Apply →</a></div>
+
+<div class="card" data-cat="big"><h3>Branch Kenya ⭐ 4.4</h3><table><tr><td>Loan Limit</td><td>KES 1,000 - 70,000</td></tr><tr><td>Interest</td><td>2% - 18%</td></tr><tr><td>Speed</td><td>10 Minutes</td></tr><tr><td>Repay</td><td>Up to 12 Months</td></tr><tr><td>Best For</td><td>Big Loans</td></tr></table><a class="apply" href="https://branch.co.ke" target="_blank">Apply on Branch →</a></div>
+
+<div class="card" data-cat="fast"><h3>Fuliza ⭐ 4.3</h3><table><tr><td>Loan Limit</td><td>KES 100 - 70,000</td></tr><tr><td>Interest</td><td>1% per day</td></tr><tr><td>Speed</td><td>Instant</td></tr><tr><td>Repay</td><td>When you top up</td></tr><tr><td>Best For</td><td>Overdraft</td></tr></table><a class="apply" href="fuliza-loan.html">How to Activate →</a></div>
+
+<div class="card" data-cat="big low"><h3>KCB M-Pesa ⭐ 4.5</h3><table><tr><td>Loan Limit</td><td>KES 100 - 1,000,000</td></tr><tr><td>Interest</td><td>1.16% per month</td></tr><tr><td>Speed</td><td>Instant</td></tr><tr><td>Repay</td><td>30 Days - 6 Months</td></tr><tr><td>Best For</td><td>Low Interest</td></tr></table><a class="apply" href="kcb-mpesa-loan.html">How to Apply →</a></div>
+</div>
+
+<div class="bottom-nav">
+<a href="index.html"><span>🏠</span>Home</a>
+<a href="compare.html" class="active"><span>💬</span>Compare</a>
+<a href="index.html"><span>💬</span>Saved</a>
+<a href="index.html"><span>👤</span>Profile</a>
+</div>
+<script>
+function show(cat,btn){
+document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+document.querySelectorAll('.card').forEach(c=>{
+if(cat=='all'||c.dataset.cat.includes(cat))c.style.display='block';else c.style.display='none';
+});
+}
+</script>
+</body>
+                                                                                                                                                             </html>
