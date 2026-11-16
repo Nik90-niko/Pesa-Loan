@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PesaLoan254 - Need a Loan Today? Connect to Best Lender</title>
+<meta name="description" content="PesaLoan254 - Compare loans in Kenya. Tala, M-Shwari, Branch, Fuliza. Find your best lender in 1 minute.">
+<style>
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:0;background:#f4f6f4;padding-bottom:80px}
+header{background:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 1px 5px rgba(0,0,0,.08)}
+.logo{font-size:23px;font-weight:900;color:#0a8a00;display:flex;align-items:center;gap:5px}
+.logo i{font-style:normal;background:#e6f5e6;border:2px solid #0a8a00;border-radius:8px;padding:2px 6px;font-size:18px}
+.btn{padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:14px}
+.btn-outline{color:#0a8a00;background:#fff;border:1px solid #0a8a00}
+.btn-green{background:#0a8a00;color:#fff;border:1px solid #0a8a00}
+.hero{background:#0a8a00;color:#fff;padding:28px 15px 85px;text-align:center;border-radius:0 0 20px 20px}
+.hero h1{font-size:30px;margin:0;line-height:1.15}
+.hero p{font-size:15px;margin:8px 0 0;opacity:.95}
+.form-card{background:#fff;border-radius:14px;padding:18px;margin:-65px 15px 0;box-shadow:0 4px 15px rgba(0,0,0,.12);position:relative}
+.form-card h2{font-size:19px;margin:0 0 12px;color:#222}
+.form-card label{font-size:13px;font-weight:bold;color:#333}
+.form-card input,.form-card select{width:100%;padding:13px;margin:6px 0 12px;border:1px solid #ddd;border-radius:8px;font-size:15px}
+.form-card button{width:100%;padding:14px;background:#0a8a00;color:#fff;border:none;border-radius:8px;font-size:16px;font-weight:800}
+.section{padding:18px 15px 0;max-width:800px;margin:auto}
+.section h2{font-size:20px;margin:0 0 12px}
+.lender{background:#fff;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+.lender-icon{width:48px;height:48px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+.lender-info{flex:1}
+.lender-info h3{margin:0;font-size:16px}
+.lender-info p{margin:4px 0 0;font-size:12.5px;color:#666;line-height:1.4}
+.apply{background:#0a8a00;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:14px}
+#result{display:none;background:#fff3cd;border:1px solid #ffdf7e;padding:15px;border-radius:12px;margin:15px;text-align:center}
+#result a{background:#0a8a00;color:#fff;padding:11px 20px;border-radius:25px;text-decoration:none;display:inline-block;font-weight:bold;margin-top:8px}
+.how{background:#fff;border-radius:12px;padding:15px;margin-bottom:12px;text-align:center}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px 0 12px;border-top:1px solid #eee;z-index:20}
+.bottom-nav a{text-decoration:none;color:#888;text-align:center;font-size:11px;display:flex;flex-direction:column;gap:2px;align-items:center}
+.bottom-nav a.active{color:#0a8a00;font-weight:bold}
+.bottom-nav span{font-size:20px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:99;justify-content:center;align-items:center;padding:15px}
+.modal-box{background:#fff;width:100%;max-width:380px;border-radius:15px;padding:22px;position:relative;text-align:center}
+.modal-box input{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
+.modal-box button{width:100%;padding:13px;background:#0a8a00;color:#fff;border:none;border-radius:8px;font-weight:bold}
+.close{position:absolute;right:15px;top:8px;font-size:24px;cursor:pointer}
+footer{padding:20px;text-align:center;font-size:11px;color:#888;line-height:1.6}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo"><i>🛡️$</i> PesaLoan254</div>
+<div><a class="btn btn-outline" href="#" onclick="openModal('signin')">Sign In</a> <a class="btn btn-green" href="#" onclick="openModal('signup')">Sign Up</a></div>
+</header>
+
+<div class="hero">
+<h1>Need a Loan Today?</h1>
+<p>We Connect You To The Best Lender</p>
+</div>
+
+<div class="form-card">
+<h2>Find Your Best Lender in 1 Minute</h2>
+<label>Loan Amount</label>
+<select id="amount">
+<option value="1000">KES 5,000</option>
+<option value="5000">KES 1,000 - 10,000</option>
+<option value="20000">KES 10,000 - 30,000</option>
+<option value="50000">KES 30,000 - 70,000</option>
+</select>
+<label>Phone Number</label>
+<input type="tel" id="phone" placeholder="0712 345 678" maxlength="10">
+<button onclick="findLender()">FIND MY LENDER</button>
+<p style="font-size:11px;text-align:center;color:#888;margin:10px 0 0">Free service. We are NOT a lender. We connect you to licensed lenders. Never share M-Pesa PIN.</p>
+</div>
+
+<div id="result">
+<h3 style="margin:0">✅ Best Match For You:</h3>
+<p id="resultText" style="font-weight:bold"></p>
+<a id="resultBtn" href="#" target="_blank">APPLY NOW →</a>
+</div>
+
+<div class="section">
+<h2>Top Lenders For You</h2>
+<div class="lender"><div class="lender-icon" style="color:#fff;background:#0a8a00">T</div><div class="lender-info"><h3>Tala Kenya</h3><p>KES 1,000 - 30,000 • Instant approval • 7-30 days</p></div><a class="apply" href="https://tala.co.ke" target="_blank">Apply</a></div>
+<div class="lender"><div class="lender-icon" style="color:#000">M</div><div class="lender-info"><h3>M-Shwari</h3><p>KES 100 - 50,000 • Via M-Pesa • 30 days</p></div><a class="apply" href="m-shwari-loan.html">Apply</a></div>
+<div class="lender"><div class="lender-icon" style="color:#000">B</div><div class="lender-info"><h3>Branch</h3><p>KES 1,000 - 70,000 • No collateral • 4-12 months</p></div><a class="apply" href="https://branch.co.ke" target="_blank">Apply</a></div>
+<div class="lender"><div class="lender-icon" style="color:#000">F</div><div class="lender-info"><h3>Fuliza</h3><p>KES 100 - 20,000 • Overdraft via M-Pesa</p></div><a class="apply" href="fuliza-loan.html">Apply</a></div>
+<div class="lender"><div class="lender-icon" style="color:#fff;background:#1a5c00">K</div><div class="lender-info"><h3>KCB M-Pesa</h3><p>KES 100 - 1,000,000 • Low interest 1.16% • 30 days</p></div><a class="apply" href="kcb-mpesa-loan.html">Apply</a></div>
+</div>
+
+<div class="section">
+<h2>How It Works</h2>
+<div class="how"><h3>1️⃣ Tell Us What You Need</h3><p>Enter amount + M-Pesa number</p></div>
+<div class="how"><h3>2️⃣ We Match You</h3><p>We show best lender for your amount</p></div>
+<div class="how"><h3>3️⃣ You Apply Directly</h3><p>You apply to lender, money goes to M-Pesa</p></div>
+</div>
+
+<div class="modal" id="signin"><div class="modal-box"><span class="close" onclick="closeModal('signin')">×</span><h2>Welcome Back</h2><p>Sign in to PesaLoan254</p><input type="tel" placeholder="Phone 07XX"><input type="password" placeholder="Password"><button onclick="alert('Signed in!');closeModal('signin')">SIGN IN</button><p style="font-size:12px">No account? <a href="#" onclick="closeModal('signin');openModal('signup')">Sign Up</a></p></div></div>
+<div class="modal" id="signup"><div class="modal-box"><span class="close" onclick="closeModal('signup')">×</span><h2>Create Account</h2><p>Join 12,000+ Kenyans</p><input type="text" placeholder="Full Name"><input type="tel" placeholder="Phone 07XX"><input type="password" placeholder="Create Password"><button onclick="alert('Account Created!');closeModal('signup')">CREATE ACCOUNT</button><p style="font-size:11px;color:#666">We are an information service, not a lender.</p></div></div>
+
+<footer>© 2026 PesaLoan254.co.ke<br>DISCLAIMER: PesaLoan254 is NOT a lender. We connect you to licensed lenders. Never share M-Pesa PIN.<br><a href="privacy-policy.html">Privacy</a> | <a href="terms.html">Terms</a></footer>
+
+<div class="bottom-nav">
+<a href="index.html" class="active"><span>🏠</span>Home</a>
+<a href="compare.html"><span>💬</span>Compare</a>
+<a href="#" onclick="openModal('signin')"><span>💬</span>Saved</a>
+<a href="#" onclick="openModal('signin')"><span>👤</span>Profile</a>
+</div>
+
+<script>
+function openModal(id){document.getElementById(id).style.display='flex'}
+function closeModal(id){document.getElementById(id).style.display='none'}
+function findLender(){
+let amt=document.getElementById('amount').value;
+let phone=document.getElementById('phone').value;
+if(phone.length<9){alert('Please enter valid phone number');return;}
+let r=document.getElementById('result');let t=document.getElementById('resultText');let b=document.getElementById('resultBtn');r.style.display='block';
+if(amt==1000){t.innerText='For KES 5,000: M-Shwari is best - Dial *234#';b.href='m-shwari-loan.html';}
+else if(amt==5000){t.innerText='For KES 1,000 - 10,000: Tala is best - 5 min approval';b.href='https://tala.co.ke';}
+else if(amt==20000){t.innerText='For KES 10,000 - 30,000: Branch is best - Higher limit';b.href='https://branch.co.ke';}
+else{t.innerText='For KES 30,000 - 70,000: Branch or KCB M-Pesa';b.href='https://branch.co.ke';}
+r.scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
