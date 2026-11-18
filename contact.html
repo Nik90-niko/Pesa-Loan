@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6747756282252436"
-     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us - PesaLoan254</title>
 <style>
 body{font-family:sans-serif;margin:0;background:#f4f4f4;color:#333;padding:20px}
 .card{background:white;padding:20px;border-radius:12px;max-width:600px;margin:auto}
-h1{color:#0a7a42}
-.btn{display:block;text-align:center;padding:14px;border-radius:10px;text-decoration:none;margin-top:12px;font-weight:bold}
-.blue{background:#0a7a42;color:white}
-.grey{background:#eee;color:#333}
-input,textarea{width:100%;padding:12px;margin-top:10px;border:1px solid #ddd;border-radius:8px;box-sizing:border-box}
+h1{text-align:center}
+p{text-align:center}
+input,textarea{width:100%;padding:12px;margin-top:10px;border:1px solid #ddd;border-radius:8px;box-sizing:border-box;font-size:16px}
+.btn{display:block;text-align:center;padding:14px;border-radius:10px;margin-top:10px;text-decoration:none;font-weight:bold}
+.blue{background:#0a7a42;color:white;border:none;width:100%;font-size:16px;cursor:pointer}
+.light{background:#eee;color:#333}
+.small{font-size:13px;color:#777;text-align:center;margin-top:15px}
 </style>
 </head>
 <body>
 <div class="card">
 <h1>Contact Us</h1>
-<p>Have a question about comparing loans? Send us a message.</p>
+<p>Questions about comparing loans? Send us a message.</p>
 
-<a class="btn blue" href="mailto:info@pesaloan254.co.ke">📧 Email Us - info@pesaloan254.co.ke</a>
+<a class="btn light" href="mailto:info@pesaloan254.co.ke">📧 Email Us: info@pesaloan254.co.ke</a>
 
-<h3>Send a Message</h3>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Your Phone Number" required>
-<textarea rows="4" placeholder="Your Message... e.g. I need help comparing loans"></textarea>
-<button type="submit" class="btn blue" style="border:none;width:100%;cursor:pointer;">Send Message</button>
+<h3 style="text-align:center;margin-top:25px">Send a Message</h3>
+
+<form action="https://formsubmit.co/info@pesaloan254.co.ke" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="phone" placeholder="Your Phone Number" required>
+<textarea name="message" rows="4" placeholder="Your Message... e.g. I need help comparing loans" required></textarea>
+<input type="hidden" name="_next" value="https://pesaloan254.co.ke/contact.html">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Message from PesaLoan254 Website">
+<button type="submit" class="btn blue">Send Message</button>
 </form>
-<p style="font-size:13px;color:#777;">We are not a lender. For loan approval, please apply directly via the lender's app. We only help you compare.</p>
 
-<a class="btn grey" href="index.html">← Back to Home</a>
+<p class="small">We are not a lender. For loan applications, contact the lender directly. We reply within 24 hours.</p>
+
+<a class="btn light" href="index.html">← Back to Home</a>
+<a class="btn light" href="privacy.html">Privacy Policy</a>
+<a class="btn light" href="about.html">About Us</a>
 </div>
 </body>
 </html>
