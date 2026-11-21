@@ -91,12 +91,16 @@ input,select{width:100%;padding:14px;border:1px solid #ddd;border-radius:10px;ma
 </div>
 
 <!-- CONTACT / INFO -->
-<div id="contact-page" class="page">
-  <div class="card"><h2>About PesaLoan254</h2><p style="font-size:14px;line-height:1.7;color:#444;margin-top:8px">PesaLoan254 is a free loan comparison website for Kenyans. We help you compare trusted digital lenders. We are NOT a lender and we do not decide who gets a loan.</p></div>
-  <div class="card"><h3>Privacy Policy</h3><p style="font-size:14px;line-height:1.7;color:#444;margin-top:8px">We do not collect your ID number, M-PESA PIN, or password. We do not store your loan application. When you tap Apply, you go directly to the lender's official website.</p></div>
-  <div class="card"><h3>Terms</h3><p style="font-size:14px;line-height:1.7;color:#444;margin-top:8px">Interest, fees, approval and repayment are decided by the lender. Example: KES 10,000 at 15% for 30 days = Pay KES 11,500 total. Check lender's full terms before accepting.</p></div>
-  <div class="card"><h3>Contact</h3><p style="font-size:14px;line-height:1.7;color:#444;margin-top:8px">Email: <b>info@pesaloan254.co.ke</b><br>Website: pesaloan254.co.ke</p></div>
-</div>
+function showPage(pageId){
+  // Hide ALL pages first
+  document.querySelectorAll('.page').forEach(p => {
+    p.style.display = 'none';
+  });
+  // Show ONLY the one you tapped
+  document.getElementById('page-' + pageId).style.display = 'block';
+  // Scroll to top
+  window.scrollTo(0,0);
+}
 
 <div class="footer">© 2026 PesaLoan254.co.ke - Loan Comparison Service. Not a lender.<br><a onclick="showPage('contact-page')">About | Privacy | Terms | Contact</a></div>
 
