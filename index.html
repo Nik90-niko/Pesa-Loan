@@ -4,18 +4,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PesaLoan254 - Compare Loans in Kenya</title>
 <style>
-body{font-family:Arial;margin:0;background:#F8F9FA;padding-bottom:80px}
-.header{background:#111;color:#fff;padding:16px;text-align:center;position:sticky;top:0;z-index:10}
+body{font-family:Arial;margin:0;background:#F8F9FA;padding-bottom:90px}
+.header{background:#111;color:#fff;padding:16px;text-align:center}
 .header h1{margin:0;font-size:22px}
 .header p{margin:4px 0 0;color:#aaa;font-size:13px}
 .search{padding:12px 16px 0}
 .search input{width:100%;padding:12px;border-radius:12px;border:1px solid #ddd;box-sizing:border-box;font-size:15px}
-.page{display:none;padding:16px}
-.page.active{display:block}
-.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
-.badge{font-size:11px;padding:4px 8px;border-radius:20px;font-weight:bold}
-.tags{display:flex;gap:6px;margin:12px 0;font-size:12px;flex-wrap:wrap}
-.tags span{background:#F1F3F4;padding:6px 10px;border-radius:20px}
+.card{background:#fff;border-radius:16px;padding:16px;margin:16px 16px 0;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.tags{margin:10px 0;font-size:12px}
+.tags span{background:#F1F3F4;padding:6px 10px;border-radius:20px;display:inline-block;margin:2px}
 .btn{width:100%;background:#111;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:bold;cursor:pointer;font-size:15px}
 .footer{text-align:center;font-size:13px;color:#666;padding:16px}
 .footer a{color:#111;cursor:pointer;margin:0 6px;text-decoration:underline}
@@ -28,90 +25,59 @@ td,th{border:1px solid #eee;padding:8px;text-align:left}
 <body>
 
 <div class="header"><h1>PesaLoan254 🇰🇪</h1><p>Compare trusted loan apps in Kenya</p></div>
-<div class="search"><input id="searchBox" oninput="filterLoans()" placeholder="🔍 Search e.g. Zenka, Timiza, 50K..."></div>
 
-<!-- HOME -->
-<div id="home-page" class="page active">
+<div class="search"><input id="searchBox" onkeyup="filterLoans()" placeholder="Search e.g. Zenka, Timiza, 50K..."></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Tala Kenya</b><span class="badge" style="background:#E8F5E9;color:#2E7D32">TRUSTED</span></div>
-<div class="tags"><span>KSh 1,000 - 30,000</span><span>61 Days</span><span>⭐ 4.5</span></div>
-<p style="font-size:13px;color:#555">No collateral. Get money in minutes via M-PESA.</p>
-<button class="btn" onclick="applyNow('Tala Kenya')">Apply Now →</button></div>
+<!-- HOME - VISIBLE BY DEFAULT -->
+<div id="page-home" style="display:block">
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Branch</b><span class="badge" style="background:#E3F2FD;color:#1565C0">POPULAR</span></div>
-<div class="tags"><span>KSh 500 - 70,000</span><span>62 Days</span><span>⭐ 4.4</span></div>
-<p style="font-size:13px;color:#555">Build credit limit as you repay. Fast approval.</p>
-<button class="btn" onclick="applyNow('Branch')">Apply Now →</button></div>
+<div class="card loan-card"><b>Tala Kenya</b><div class="tags"><span>KSh 1,000 - 30,000</span><span>61 Days</span><span>⭐ 4.5</span></div><p>No collateral. Money in minutes via M-PESA.</p><button class="btn" onclick="applyNow('Tala Kenya')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Zenka</b><span class="badge" style="background:#E8F5E9;color:#2E7D32">FIRST LOAN 0%</span></div>
-<div class="tags"><span>KSh 500 - 50,000</span><span>61 Days</span><span>⭐ 4.3</span></div>
-<p style="font-size:13px;color:#555">First loan FREE! Get up to 50K in 5 minutes.</p>
-<button class="btn" onclick="applyNow('Zenka')">Apply Now →</button></div>
+<div class="card loan-card"><b>Branch</b><div class="tags"><span>KSh 500 - 70,000</span><span>62 Days</span><span>⭐ 4.4</span></div><p>Build limit as you repay.</p><button class="btn" onclick="applyNow('Branch')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Zash Loan</b><span class="badge" style="background:#FFF3E0;color:#E65100">INSTANT</span></div>
-<div class="tags"><span>KSh 500 - 50,000</span><span>91 Days</span><span>⭐ 4.2</span></div>
-<p style="font-size:13px;color:#555">Instant mobile loan. No paperwork, no guarantor.</p>
-<button class="btn" onclick="applyNow('Zash')">Apply Now →</button></div>
+<div class="card loan-card"><b>Zenka</b><div class="tags"><span>KSh 500 - 50,000</span><span>61 Days</span><span>⭐ 4.3</span></div><p>First loan FREE! Up to 50K in 5 minutes.</p><button class="btn" onclick="applyNow('Zenka')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>LendPlus</b><span class="badge" style="background:#F3E5F5;color:#7B1FA2">NEW</span></div>
-<div class="tags"><span>KSh 1,000 - 30,000</span><span>90 Days</span><span>⭐ 4.1</span></div>
-<p style="font-size:13px;color:#555">Flexible repayment. Grow limit with good repayment.</p>
-<button class="btn" onclick="applyNow('LendPlus')">Apply Now →</button></div>
+<div class="card loan-card"><b>Zash Loan</b><div class="tags"><span>KSh 500 - 50,000</span><span>91 Days</span><span>⭐ 4.2</span></div><p>Instant loan. No paperwork.</p><button class="btn" onclick="applyNow('Zash')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Timiza - Absa</b><span class="badge" style="background:#E8F5E9;color:#2E7D32">BANK</span></div>
-<div class="tags"><span>KSh 500 - 100,000</span><span>30 Days</span><span>⭐ 4.0</span></div>
-<p style="font-size:13px;color:#555">From Absa Bank. Dial *848# or use app. Trusted bank loan.</p>
-<button class="btn" onclick="applyNow('Timiza')">Apply Now →</button></div>
+<div class="card loan-card"><b>LendPlus</b><div class="tags"><span>KSh 1,000 - 30,000</span><span>90 Days</span><span>⭐ 4.1</span></div><p>Flexible repayment.</p><button class="btn" onclick="applyNow('LendPlus')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Okash</b><span class="badge" style="background:#E3F2FD;color:#1565C0">FAST</span></div>
-<div class="tags"><span>KSh 500 - 50,000</span><span>91 Days</span><span>⭐ 4.0</span></div>
-<p style="font-size:13px;color:#555">Sister to OPay. Quick loans for everyday needs.</p>
-<button class="btn" onclick="applyNow('Okash')">Apply Now →</button></div>
+<div class="card loan-card"><b>Timiza - Absa</b><div class="tags"><span>KSh 500 - 100,000</span><span>30 Days</span><span>⭐ 4.0</span></div><p>From Absa Bank. Dial *848#</p><button class="btn" onclick="applyNow('Timiza')">Apply Now →</button></div>
 
-<div class="card">
-<div style="display:flex;justify-content:space-between"><b>Haraka / PesaPap</b><span class="badge" style="background:#FFF3E0;color:#E65100">EASY</span></div>
-<div class="tags"><span>KSh 500 - 20,000</span><span>30 Days</span><span>⭐ 4.0</span></div>
-<p style="font-size:13px;color:#555">Small quick loans for emergencies. Easy approval.</p>
-<button class="btn" onclick="applyNow('Haraka')">Apply Now →</button></div>
+<div class="card loan-card"><b>Okash</b><div class="tags"><span>KSh 500 - 50,000</span><span>91 Days</span><span>⭐ 4.0</span></div><p>Quick loans for everyday needs.</p><button class="btn" onclick="applyNow('Okash')">Apply Now →</button></div>
+
+<div class="card loan-card"><b>Haraka / PesaPap</b><div class="tags"><span>KSh 500 - 20,000</span><span>30 Days</span><span>⭐ 4.0</span></div><p>Small quick loans for emergencies.</p><button class="btn" onclick="applyNow('Haraka')">Apply Now →</button></div>
 
 </div>
 
-<!-- COMPARE -->
-<div id="compare-page" class="page">
+<!-- COMPARE - HIDDEN BY DEFAULT -->
+<div id="page-compare" style="display:none">
 <div class="card"><h2>Compare All</h2>
-<table><tr><th>App</th><th>Max</th><th>First Loan</th></tr>
+<table><tr><th>App</th><th>Max</th><th>Note</th></tr>
 <tr><td>Timiza</td><td>100K</td><td>Bank</td></tr>
-<tr><td>Branch</td><td>70K</td><td>Normal</td></tr>
-<tr><td>Zenka</td><td>50K</td><td>0% FREE</td></tr>
-<tr><td>Zash</td><td>50K</td><td>Normal</td></tr>
-<tr><td>Okash</td><td>50K</td><td>Normal</td></tr>
-<tr><td>Tala</td><td>30K</td><td>Normal</td></tr>
-<tr><td>LendPlus</td><td>30K</td><td>Normal</td></tr>
-<tr><td>Haraka</td><td>20K</td><td>Normal</td></tr>
+<tr><td>Branch</td><td>70K</td><td>Popular</td></tr>
+<tr><td>Zenka</td><td>50K</td><td>0% First</td></tr>
+<tr><td>Zash</td><td>50K</td><td>Instant</td></tr>
+<tr><td>Okash</td><td>50K</td><td>Fast</td></tr>
+<tr><td>Tala</td><td>30K</td><td>Trusted</td></tr>
+<tr><td>LendPlus</td><td>30K</td><td>New</td></tr>
+<tr><td>Haraka</td><td>20K</td><td>Easy</td></tr>
 </table></div>
 </div>
 
 <!-- CONTACT -->
-<div id="contact-page" class="page">
-<div class="card"><h2>About PesaLoan254</h2><p>We compare trusted loan apps in Kenya. We are NOT a lender. Always check interest before borrowing.</p></div>
+<div id="page-contact" style="display:none">
+<div class="card"><h2>About PesaLoan254</h2><p>We compare trusted loan apps in Kenya. We are NOT a lender.</p></div>
 <div class="card"><h2>Contact</h2><p>Email: info@pesaloan254.com<br>WhatsApp: 0700 000 000</p></div>
 </div>
 
 <!-- PRIVACY -->
-<div id="privacy-page" class="page">
-<div class="card"><h2>Privacy Policy</h2><p>We do not collect your ID, PIN or M-PESA password. When you tap Apply, you go directly to the lender's official site/app in a new tab.</p></div>
+<div id="page-privacy" style="display:none">
+<div class="card"><h2>Privacy Policy</h2><p>We do not collect your ID, PIN or M-PESA password. When you tap Apply, you go to the lender's official site in a new tab.</p></div>
 </div>
 
 <!-- TERMS -->
-<div id="terms-page" class="page">
-<div class="card"><h2>Terms</h2><p>PesaLoan254 is a comparison site. Loan approval, interest and repayment are decided by the lender. Borrow responsibly.</p></div>
+<div id="page-terms" style="display:none">
+<div class="card"><h2>Terms</h2><p>PesaLoan254 is a comparison site. Loan approval is decided by the lender. Borrow responsibly.</p></div>
 </div>
 
 <div class="footer">
@@ -129,19 +95,26 @@ td,th{border:1px solid #eee;padding:8px;text-align:left}
 </div>
 
 <script>
-function showPage(pageId){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('page-'+pageId).classList.add('active');
+function showPage(name){
+  document.getElementById('page-home').style.display='none';
+  document.getElementById('page-compare').style.display='none';
+  document.getElementById('page-contact').style.display='none';
+  document.getElementById('page-privacy').style.display='none';
+  document.getElementById('page-terms').style.display='none';
+  document.getElementById('page-'+name).style.display='block';
   window.scrollTo(0,0);
 }
 function filterLoans(){
-  let q=document.getElementById('searchBox').value.toLowerCase();
-  document.querySelectorAll('#home-page .card').forEach(c=>{
-    c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
-  });
+  var q=document.getElementById('searchBox').value.toLowerCase();
+  var cards=document.getElementsByClassName('loan-card');
+  for(var i=0;i<cards.length;i++){
+    if(cards[i].innerText.toLowerCase().indexOf(q)>-1){cards[i].style.display='block';}
+    else{cards[i].style.display='none';}
+  }
+  if(q!==''){showPage('home');}
 }
 function applyNow(lender){
-  const links={
+  var links={
     "Tala Kenya":"https://tala.co.ke",
     "Branch":"https://branch.co.ke/",
     "Zenka":"https://zenka.co.ke",
