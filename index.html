@@ -155,6 +155,21 @@ document.getElementById('installBtn').addEventListener('click', async ()=>{
   }
 });
 if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js'); }
+  function showPage(pageId){
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('active');
+  });
+  document.getElementById('page-' + pageId).classList.add('active');
+  window.scrollTo(0,0);
+}
+function applyNow(lender){
+  const links = {
+    "Tala Kenya": "https://tala.co.ke",
+    "Zenka": "https://zenka.co.ke",
+    "Branch": "https://branch.co.ke/"
+  };
+  window.location.href = links[lender];
+  }
 </script>
 </body>
 </html>
