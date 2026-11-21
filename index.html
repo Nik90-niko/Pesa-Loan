@@ -134,10 +134,9 @@ const lenderLinks = {
   "M-Shwari": "https://www.safaricom.co.ke/m-pesa/m-shwari",
   "Branch": "https://branch.co.ke"
 };
-function applyNow(lender){
-  alert('You are going to ' + lender + ' official site.');
-  window.open(lenderLinks[lender], '_blank');
-}
+  function applyNow(lender){
+  window.location.href = lenderLinks[lender];
+  }
 
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e)=>{
