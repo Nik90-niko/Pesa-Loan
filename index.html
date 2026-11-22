@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PesaLoan254 | Compare Loans in Kenya</title>
+
+<meta name="description" content="Compare mobile loans in Kenya. Explore loan apps, repayment information, financial guides and use our free loan calculator.">
+
+<meta name="keywords" content="loans in Kenya, loan apps Kenya, mobile loans, loan comparison, Tala, Branch, Kenya">
+
+<meta name="theme-color" content="#087443">
+
+<style>
+:root {
+    --green: #087443;
+    --dark: #063e27;
+    --light: #eaf7ef;
+    --text: #17231c;
+    --muted: #68766d;
+    --white: #ffffff;
+    --border: #e4ebe6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7faf8;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.logo span {
+    color: #f0a928;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.hero {
+    background: linear-gradient(135deg, #064b2d, #0b8a50);
+    color: white;
+    padding: 65px 20px;
+}
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+    max-width: 750px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #e0f5e8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    background: #f0a928;
+    color: #17231c;
+    border: none;
+    padding: 0 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
+
+.loan-logo {
+    width: 50px;
+    height: 50px;
+    background: var(--light);
+    color: var(--green);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.loan-info {
+    margin: 18px 0;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.loan-info div {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.loan-info strong {
+    color: var(--green);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--dark);
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.ad-box {
+    background: #f0f3f1;
+    border: 1px dashed #bdc9c1;
+    color: #7c8981;
+    text-align: center;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.calculator {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 700px;
+}
+
+.calculator label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+.calculator input,
+.calculator select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce5df;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.result {
+    background: var(--light);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.result h3 {
+    color: var(--green);
+    font-size: 26px;
+}
+
+.article-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.article-card h3 {
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.article-card a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.info-section {
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+footer {
+    background: #073b26;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #d8eade;
+    font-size: 14px;
+}
+
+footer p {
+    color: #c4d8cb;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media(max-width:800px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+}
+
+@media(max-width:550px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 28px 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">PesaLoan<span>254</span></a>
+
+        <div class="nav-links">
+            <a href="#loans">Compare Loans</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#guides">Guides</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Find the right loan for your needs in Kenya</h1>
+
+        <p>
+            Compare loan providers, understand repayment costs,
+            and make informed financial decisions.
+        </p>
+
+        <div class="search-box">
+            <input id="searchInput"
+                   type="search"
+                   placeholder="Search loan apps...">
+
+            <button onclick="searchLoans()">Search</button>
+        </div>
+    </div>
+</section>
+
+<main>
+
+<section class="container" id="loans">
+
+    <h2 class="section-title">Compare Loan Providers</h2>
+
+    <p class="section-desc">
+        Explore different loan providers available to Kenyan consumers.
+        Always check the lender's current terms before borrowing.
+    </p>
+
+    <div class="grid" id="loanGrid">
+
+        <div class="card loan-card" data-name="branch">
+            <div class="loan-logo">B</div>
+            <h3>Branch</h3>
+            <p>Explore digital borrowing and repayment options.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>Branch</strong></div>
+                <div><span>Platform</span><strong>Mobile App</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://branch.co/"
+               target="_blank"
+               rel="noopener">
+               Visit Provider
+            </a>
+        </div>
+
+        <div class="card loan-card" data-name="tala">
+            <div class="loan-logo">T</div>
+            <h3>Tala</h3>
+            <p>Learn about digital loans and account eligibility.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>Tala</strong></div>
+                <div><span>Platform</span><strong>Mobile App</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://tala.co/"
+               target="_blank"
+               rel="noopener">
+               Visit Provider
+            </a>
+        </div>
+
+        <div class="card loan-card" data-name="zenka">
+            <div class="loan-logo">Z</div>
+            <h3>Zenka</h3>
+            <p>Review digital credit services and loan conditions.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>Zenka</strong></div>
+                <div><span>Platform</span><strong>Mobile</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://zenka.co.ke/"
+               target="_blank"
+               rel="noopener">
+               Visit Provider
+            </a>
+        </div>
+
+        <div class="card loan-card" data-name="timiza">
+            <div class="loan-logo">T</div>
+            <h3>Timiza</h3>
+            <p>Explore mobile financial services from Absa.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>Absa</strong></div>
+                <div><span>Platform</span><strong>Mobile</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://www.absa.co.ke/"
+               target="_blank"
+               rel="noopener">
+               Visit Provider
+            </a>
+        </div>
+
+        <div class="card loan-card" data-name="kcb mpesa">
+            <div class="loan-logo">K</div>
+            <h3>KCB M-PESA</h3>
+            <p>Explore savings and credit services through mobile banking.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>KCB</strong></div>
+                <div><span>Platform</span><strong>M-PESA</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://ke.kcbgroup.com/"
+               target="_blank"
+               rel="noopener">
+               Visit Provider
+            </a>
+        </div>
+
+        <div class="card loan-card" data-name="fuliza">
+            <div class="loan-logo">F</div>
+            <h3>Fuliza</h3>
+            <p>Learn how overdraft services work and their charges.</p>
+
+            <div class="loan-info">
+                <div><span>Provider</span><strong>Safaricom</strong></div>
+                <div><span>Platform</span><strong>M-PESA</strong></div>
+                <div><span>Availability</span><strong>Kenya</strong></div>
+            </div>
+
+            <a class="btn"
+               href="https://www
