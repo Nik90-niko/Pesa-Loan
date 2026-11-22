@@ -1,630 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2B8WP35DDB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2B8WP35DDB');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PesaLoan254 | Compare Loans in Kenya</title>
-<meta name="description" content="Compare loan apps in Kenya. Explore loan amounts, repayment periods, ratings and trusted mobile loan providers. Find loan options with PesaLoan254.">
 
-<meta name="robots" content="index, follow">
+<title>PesaLoan254 - Compare Loan Apps in Kenya</title>
 
-<link rel="canonical" href="https://pesaloan254.co.ke/">
+<meta name="description" content="Compare loan apps in Kenya. Discover digital lenders, loan amounts, interest rates, repayment periods and find the right loan for your needs.">
 
-<meta name="author" content="PesaLoan254">
+<meta name="keywords" content="loan apps Kenya, digital loans Kenya, mobile loans, Kenya loan comparison, PesaLoan254">
 
-<meta property="og:title" content="PesaLoan254 - Compare Loan Apps in Kenya">
-
-<meta property="og:description" content="Compare mobile loan providers in Kenya, loan amounts, repayment periods and loan options.">
-
-<meta property="og:url" content="https://pesaloan254.co.ke/">
-
-<meta property="og:type" content="website">
-
-<meta name="theme-color" content="#111111">
 <style>
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* HEADER */
 header {
-    background: #111;
+    background: #064e3b;
     color: white;
-    text-align: center;
-    padding: 25px 15px;
+    padding: 18px 5%;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
-header p {
-    color: #aaa;
-    margin: 8px 0 0;
-}
-
-/* MAIN */
-main {
-    max-width: 750px;
-    margin: auto;
-    padding: 20px 15px 100px;
-}
-
-/* SEARCH */
-.search-box {
-    width: 100%;
-    padding: 18px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 18px;
-    margin-bottom: 25px;
-    outline: none;
-}
-
-/* LOAN CARDS */
-.loan-card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
-}
-
-.card-header {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.card-header h2 {
-    margin: 0;
-    font-size: 23px;
-}
-
-.badge {
-    background: #e8f5e9;
-    color: #388044;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 13px;
+.logo {
+    font-size: 25px;
     font-weight: bold;
 }
 
-.blue {
-    background: #e5f2fc;
-    color: #2871ad;
+.logo span {
+    color: #4ade80;
 }
 
-.orange {
-    background: #fff0dd;
-    color: #b76a20;
+nav a {
+    margin-left: 20px;
+    font-size: 14px;
+    color: white;
 }
 
-.details {
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #064e3b, #087f5b);
+    color: white;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #e0f2e9;
+    font-size: 17px;
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 25px auto 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.details span {
-    background: #f0f2f4;
-    padding: 10px 15px;
-    border-radius: 25px;
+.search-box input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
     font-size: 15px;
 }
 
-.description {
-    color: #666;
-    font-size: 17px;
-    line-height: 1.5;
+.search-box button {
+    background: #f59e0b;
+    border: none;
+    padding: 15px 20px;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* NOTICE */
+.notice {
+    background: #e8f5ee;
+    border-left: 4px solid #16a34a;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* AD SPACE */
+.ad-box {
+    background: #fff;
+    border: 1px dashed #ccc;
+    text-align: center;
+    padding: 25px 10px;
+    margin: 25px 0;
+    color: #888;
+    font-size: 13px;
+}
+
+/* SECTION TITLE */
+.section-title {
     margin-bottom: 20px;
 }
 
-/* BUTTON */
-.apply-btn {
+.section-title h2 {
+    font-size: 26px;
+    color: #064e3b;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* LOAN CARDS */
+.loan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.loan-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.loan-card:hover {
+    transform: translateY(-4px);
+}
+
+.loan-card h3 {
+    color: #064e3b;
+    margin-bottom: 10px;
+}
+
+.loan-amount {
+    font-size: 22px;
+    font-weight: bold;
+    color: #16a34a;
+    margin: 12px 0;
+}
+
+.loan-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.loan-card .btn {
     display: block;
-    width: 100%;
-    background: #111;
+    background: #087f5b;
     color: white;
     text-align: center;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 20px;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
     font-weight: bold;
-    border-radius: 18px;
 }
 
-.apply-btn:hover {
-    background: #333;
+.loan-card .btn:hover {
+    background: #064e3b;
 }
 
-/* PAGES */
-.page {
+/* CALCULATOR */
+.calculator {
     background: white;
     padding: 25px;
-    border-radius: 22px;
-    line-height: 1.7;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
 }
 
-.page h2 {
-    margin-top: 0;
+.calculator h2 {
+    color: #064e3b;
+    margin-bottom: 15px;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    color: #777;
-    padding: 30px 10px;
+.calculator label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
 }
 
-footer a {
-    color: #111;
-    margin: 8px;
-}
-
-/* BOTTOM NAVIGATION */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.calculator input {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.calculator button {
+    background: #087f5b;
+    color: white;
+    padding: 13px;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+    background: #e8f5ee;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* ARTICLES */
+.info-section {
     background: white;
-    border-top: 1px solid #ddd;
-    padding: 15px 5px;
-    z-index: 10;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 
-.bottom-nav a {
-    text-decoration: none;
-    color: #222;
-    font-size: 17px;
+.info-section h2 {
+    color: #064e3b;
+    margin-bottom: 12px;
 }
 
-/* TABLE */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-@media(max-width:480px) {
-    .card-header h2 {
-        font-size: 20px;
-    }
-
-    .details span {
-        font-size: 14px;
-    }
-
-    .apply-btn {
-        font-size: 18px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>PesaLoan254 🇰🇪</h1>
-    <p>Compare trusted loan apps in Kenya</p>
-</header>
-
-<main id="content"></main>
-
-<nav class="bottom-nav">
-    <a href="#home">🏠 Home</a>
-    <a href="#compare">📊 Compare</a>
-    <a href="#contact">📞 Contact</a>
-</nav>
-
-<script>
-
-/* LENDER DATABASE */
-
-const lenders = [
-
-{
-name: "Tala Kenya",
-badge: "TRUSTED",
-amount: "KSh 1,000 - 30,000",
-term: "61 Days",
-rating: "4.5",
-description: "No collateral. Get money in minutes via M-PESA.",
-url: "https://tala.co.ke/"
-},
-
-{
-name: "Branch",
-badge: "POPULAR",
-amount: "KSh 500 - 70,000",
-term: "62 Days",
-rating: "4.4",
-description: "Build credit limit as you repay. Fast approval.",
-url: "https://branch.co/"
-},
-
-{
-name: "Zenka",
-badge: "FIRST LOAN 0%",
-amount: "KSh 500 - 50,000",
-term: "61 Days",
-rating: "4.3",
-description: "Check current offers and loan requirements.",
-url: "https://zenka.co.ke/"
-},
-
-{
-name: "Timiza - Absa",
-badge: "BANK",
-amount: "KSh 500 - 100,000",
-term: "30 Days",
-rating: "4.0",
-description: "From Absa Bank. Dial *848# or use the app.",
-url: "https://www.absa.co.ke/"
-},
-
-{
-name: "Okash",
-badge: "FAST",
-amount: "KSh 500 - 50,000",
-term: "91 Days",
-rating: "4.0",
-description: "Quick loans for everyday needs.",
-url: "https://play.google.com/store/search?q=Okash%20Kenya&c=apps"
-},
-
-{
-name: "Haraka / PesaPap",
-badge: "EASY",
-amount: "KSh 500 - 20,000",
-term: "30 Days",
-rating: "4.0",
-description: "Small loans for emergencies.",
-url: "https://play.google.com/store/search?q=PesaPap%20Kenya&c=apps"
-}
-
-];
-
-
-/* CREATE LOAN CARD */
-
-function createCard(loan) {
-
-return `
-<div class="loan-card">
-
-<div class="card-header">
-
-<h2>${loan.name}</h2>
-
-<span class="badge">${loan.badge}</span>
-
-</div>
-
-<div class="details">
-
-<span>${loan.amount}</span>
-
-<span>${loan.term}</span>
-
-<span>⭐ ${loan.rating}</span>
-
-</div>
-
-<p class="description">
-${loan.description}
-</p>
-
-<a class="apply-btn"
-href="${loan.url}"
-target="_blank"
-rel="noopener noreferrer">
-
-Apply Now →
-
-</a>
-
-</div>
-`;
-
-}
-
-
-/* HOME PAGE */
-
-function homePage() {
-
-document.getElementById("content").innerHTML = `
-
-<input
-type="search"
-class="search-box"
-id="search"
-placeholder="🔎 Search e.g. Zenka, Timiza, 50K..."
->
-
-<div id="loan-list">
-
-${lenders.map(createCard).join("")}
-
-</div>
-
-<footer>
-
-<a href="#about">About</a> |
-<a href="#privacy">Privacy</a> |
-<a href="#terms">Terms</a> |
-<a href="#contact">Contact</a>
-
-<p>© 2026 PesaLoan254 - Not a lender</p>
-
-</footer>
-
-`;
-
-document.getElementById("search")
-.addEventListener("input", function() {
-
-const query = this.value.toLowerCase();
-
-const filtered = lenders.filter(loan =>
-
-loan.name.toLowerCase().includes(query) ||
-loan.amount.toLowerCase().includes(query) ||
-loan.description.toLowerCase().includes(query)
-
-);
-
-document.getElementById("loan-list").innerHTML =
-filtered.map(createCard).join("");
-
-});
-
-}
-
-
-/* COMPARE PAGE */
-
-function comparePage() {
-
-let table = lenders.map(loan => `
-
-<tr>
-
-<td>${loan.name}</td>
-
-<td>${loan.amount}</td>
-
-<td>${loan.term}</td>
-
-<td>⭐ ${loan.rating}</td>
-
-</tr>
-
-`).join("");
-
-document.getElementById("content").innerHTML = `
-
-<div class="page">
-
-<h2>📊 Compare Loans</h2>
-
-<p>Compare loan providers before applying.</p>
-
-<div style="overflow-x:auto">
-
-<table>
-
-<tr>
-<th>Lender</th>
-<th>Amount</th>
-<th>Period</th>
-<th>Rating</th>
-</tr>
-
-${table}
-
-</table>
-
-</div>
-
-<p>
-Always check the lender's interest rate, fees,
-repayment amount and loan conditions before borrowing.
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* CONTACT PAGE */
-
-function contactPage() {
-
-document.getElementById("content").innerHTML = `
-
-<div class="page">
-
-<h2>📞 Contact Us</h2>
-
-<p>For enquiries, corrections or partnerships:</p>
-
-<p>
-Email:
-<a href="mailto:hello@pesaloan254.co.ke">
-hello@pesaloan254.co.ke
-</a>
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* ABOUT PAGE */
-
-function aboutPage() {
-
-document.getElementById("content").innerHTML = `
-
-<div class="page">
-
-<h2>About PesaLoan254</h2>
-
-<p>
-PesaLoan254 helps visitors compare loan providers
-and loan products available in Kenya.
-</p>
-
-<p>
-We are an informational website.
-We are not a bank or lender and we do not approve loans.
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* PRIVACY PAGE */
-
-function privacyPage() {
-
-document.getElementById("content").innerHTML = `
-
-<div class="page">
-
-<h2>Privacy Policy</h2>
-
-<p>
-This website is designed to provide loan comparison information.
-</p>
-
-<p>
-We do not collect personal financial information
-through this demo website.
-</p>
-
-<p>
-External lender websites have their own privacy policies.
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* TERMS PAGE */
-
-function termsPage() {
-
-document.getElementById("content").innerHTML = `
-
-<div class="page">
-
-<h2>Terms and Conditions</h2>
-
-<p>
-Information on this website is for general informational purposes.
-Loan details may change.
-</p>
-
-<p>
-PesaLoan254 does not guarantee loan approval.
-</p>
-
-<p>
-Always verify fees, interest, repayment dates,
-eligibility and lender details before borrowing.
-</p>
-
-<p>
-Borrow responsibly.
-</p>
-
-</div>
-
-`;
-
-}
-
-
-/* NAVIGATION */
-
-function router() {
-
-const page = location.hash.replace("#", "");
-
-switch(page) {
-
-case "compare":
-comparePage();
-break;
-
-case "contact":
-contactPage();
-break;
-
-case "about":
-aboutPage();
-break;
-
-case "privacy":
-privacyPage();
-break;
-
-case "terms":
-termsPage();
-break;
-
-default:
-homePage();
-
-}
-
-}
-
-window.addEventListener("hashchange", router);
-
-router();
-
-</script>
-
-</body>
-</html>
+.info-section h3 {
+    margin-top: 20px;
+    margin-bottom
